@@ -1,0 +1,238 @@
+/* MENU PORTFOLIO */
+
+#menu-portfolio ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#menu-portfolio ul li {
+    display: inline;
+    cursor: pointer;
+    color: #000;
+}
+
+#menu-portfolio p {
+    display: inline;
+}
+
+#menu-portfolio p:hover, .current-li p {
+    color: #911b14;
+    padding: 3px 0;
+    border-top: 2px #911b14 solid;
+    border-bottom: 2px #911b14 solid;
+}
+
+#menu-portfolio ul li:after {
+    content: '/';
+    margin: 0 20px;
+    color: #911b14;
+    font-weight: bold;
+}
+
+#menu-portfolio p:hover:after {
+    color: #911b14;
+}
+
+#menu-portfolio ul li:last-child:after {
+    content: '';
+}
+
+#menu-portfolio p:last-child {
+    margin-right: 0;
+}
+
+/* MINIATURES */
+
+#gallery {
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+#gallery li + li {
+    -webkit-transition: all 0.6s ease-in-out;
+       -moz-transition: all 0.6s ease-in-out;
+        -ms-transition: all 0.6s ease-in-out;
+         -o-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+}
+
+.current {
+    -webkit-filter: sepia(0) !important;
+       -moz-filter: sepia(0) !important;
+        -ms-filter: sepia(0) !important;
+         -o-filter: sepia(0) !important;
+            filter: sepia(0) !important;
+
+    -webkit-transform: scale(1.05);
+       -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+         -o-transform: scale(1.05);
+            transform: scale(1.05);
+
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.not-current {
+    opacity: 0.5;
+
+    -webkit-filter: grayscale(1) !important;
+       -moz-filter: grayscale(1) !important;
+        -ms-filter: grayscale(1) !important;
+         -o-filter: grayscale(1) !important;
+            filter: grayscale(1) !important;
+
+    -webkit-transform: scale(0.75); 
+       -moz-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+         -o-transform: scale(0.75);
+            transform: scale(0.75);
+}
+
+/* LEAST */
+
+#fullPreview {
+    background-color: #911b14;
+    border-top: 2px solid #911b14;
+    border-bottom: 2px solid #911b14;
+    box-shadow: 0 0 10px;
+    padding: 20px 0 20px 0;
+    display: none; 
+}
+
+#fullPreview .ext {
+    color: white;
+    text-decoration: underline;
+}
+
+.button.buttonPortfolio {
+    background: #6A0600;
+    text-decoration: none;
+}
+
+.buttonPortfolio {
+    margin: 10px auto;
+}
+
+#fullPreview img, .fullCaption {
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+    display: block; 
+}
+
+.fullCaption strong {
+    font-weight: bold;
+}
+
+.fullCaption {
+    color: #fff;
+    margin: 15px auto 0 auto; 
+    line-height: 25px;
+}
+
+.fullCaption a.ext {
+    text-decoration: underline;
+    font-weight: bold;
+    color: white;
+}
+
+#fullPreview .close {
+    background-image: url("../images/portfolio/close.png");
+    background-size: 100%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer; 
+}
+
+#gallery li + li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+#gallery li:hover .overLayer {
+    -webkit-transition: opacity 0.8s ease-in-out;
+       -moz-transition: opacity 0.8s ease-in-out;
+        -ms-transition: opacity 0.8s ease-in-out;
+         -o-transition: opacity 0.8s ease-in-out;
+            transition: opacity 0.8s ease-in-out;
+    opacity: 0.8;
+    display: block;
+    background: #fff; 
+}
+
+#gallery li:hover .overText {
+    -webkit-transition: opacity 0.3s linear;
+       -moz-transition: opacity 0.3s linear;
+        -ms-transition: opacity 0.3s linear;
+         -o-transition: opacity 0.3s linear;
+            transition: opacity 0.3s linear;
+    opacity: 1;
+    display: block; 
+    color: #000;
+}
+
+#gallery li > a {
+    display: block;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    z-index: 6; 
+}
+
+#gallery li a.spinner {
+    background-size: 100%;
+    background-image: url("../images/portfolio/spinner.gif");
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 110px;
+    top: 100px; 
+}
+
+#gallery li + li img { /* Margin sur la gallery mais pas l'image full */
+    border: none;
+    margin: 30px 30px 0 0; 
+}
+
+.imagelightbox {
+    width: 300px;
+    height: 200px;
+}
+
+.overLayer, .overText {
+    -webkit-transition: opacity 0.3s ease-in-out;
+       -moz-transition: opacity 0.3s ease-in-out;
+        -ms-transition: opacity 0.3s ease-in-out;
+         -o-transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    top: 30px;
+    left: 0;
+    z-index: 4;
+}
+
+.overText h2 {
+    font-size: 25px; 
+    margin: 80px 0 0 0;
+}
+
+.projectInfo {
+    display: none; 
+}

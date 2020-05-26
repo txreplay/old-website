@@ -1,0 +1,21 @@
+header { margin: 50px 0; }
+
+header h1 {
+	font-size: 75px;
+	font-weight: 500;
+}
+
+header h2 {
+	font-size: 35px;
+	font-weight: 300;
+}
+
+.jumbotron h1 { font-size: 43px; }
+.jumbotron p { font-size: 18px; }
+.btn-lg, .btn-group-lg>.btn { font-size: 15px; }
+.list-group { margin-top: 50px; }
+.unicorn {
+	height: 40px;
+	width: 140px;
+	border-radius: 100%;
+}
